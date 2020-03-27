@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Display Info</title>
+</head>
+<h2 style="color:#9b42f5">Retrieved Data from Database</h2>
+<br>
+<style type="text/css"> 
+    td{ 
+        padding: 8px 8px; 
+        border: 1px solid black;
+        color: black; 
+    } 
+</style> 
+
+<body>
+<table> 
+    {% for key, value in context.items %}
+    <tr>
+    <td>{{ key}}</td>
+    <td>{{value}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<h3> Reach home page by clicking below link</h3>
+<a href="/">Back</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html>
+<head>
+<style>
+	body {
+  		  font-family: "Times New Roman", Times, serif;
+  		  background-color: white;
+		 }
+
+</style>
+</head>
+<body>
+	<h1 align="center">Validating form using Django</h1>
+	<h2>Register</h2>
+	<p>Please fill this form to create an account.</p>
+	<br> 
+	<form action="" method="post"><input type='hidden'/>
+		{%csrf_token %}
+		<label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter username" name="username" required>
+        <br><br>
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Valid Email" name="email" required>
+        <br><br> 
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+        <h3><font color="red"> *Check conditions to create password </font></h3>
+        	<details>
+        	<p>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+    		</details>	
+    	<br><br>	
+    	<button type="submit">Register Here</button>
+    </form>
+</body>
+<br>
+	<a href="{% url 'get_data_from_db' %}">Query Set</a>
+
+</html>
+
+
+
+
