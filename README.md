@@ -43,5 +43,29 @@ def get_data_from_db(request):
 ### How to run this code  
 To run this code, please install the requirements from requirements.txt file using the below command 
 ```
-pip3 install requirements.txt
+pip3 install requirement.txt
+``` 
+
+After the above step, please run the below command 
 ```
+python3 manage.py runserver
+```
+
+Note: IF you want to see the data in the gui then below previous command please run the below commands
+
+```
+python3 manage.py makemigrations  
+python3 manage.py migrate  
+python3 manager.py createsuperuser
+```  
+
+You can access the data in the django admin at the below link  
+
+http://127.0.0.1:8000/admin/  
+
+Enter username and password created while creating superuser.  
+
+I hope readers enjoy reading read me file.  
+
+
+
